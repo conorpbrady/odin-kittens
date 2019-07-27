@@ -11,10 +11,15 @@
 
   <body>
     <div id="header">
-      <%= link_to 'All kittens', root_url %> | 
+      <%= link_to 'All kittens', root_url %> |
       <%= link_to 'New kitten', kitten_new_path %>
 
     <div>
+      <div id="container">
+        <% flash.each do |key, value| %>
+          <div class="alert alert-"<%= key %>"><%= value %></div>
+          <% end %>
+      </div>
     <%= yield %>
   </body>
 </html>
