@@ -1,0 +1,17 @@
+<%= form_for(:kitten, url: kittens_path) do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :age, "Age (months)" %>
+<%= f.select :age, options_for_select((1..12).to_a, @kitten.age) %>
+<br>
+<%= f.label :softness %>
+<%= f.select :softness, options_for_select((1..10).to_a, @kitten.softness) %>
+<br>
+<%= f.label :cuteness %>
+<%= f.select :cuteness, options_for_select((1..10).to_a, @kitten.cuteness) %>
+<br>
+<%= f.submit "Submit" %>
+
+<% end %>

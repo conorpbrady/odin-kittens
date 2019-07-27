@@ -1,0 +1,12 @@
+<h1>Kittens#show</h1>
+<p>Find me in app/views/kittens/show.html.erb</p>
+
+<ul class="kitten">
+  <li>Name: <%= @kitten.name %></li>
+  <li>Age: <%= @kitten.age %></li>
+  <li>Softness: <%= @kitten.softness %></li>
+  <li>Cuteness: <%= @kitten.cuteness %></li>
+</ul>
+<br>
+<%= link_to "Edit kitten", kitten_edit_path(@kitten) %> |
+<%= link_to "Delete kitten", @kitten, method: :delete %>
